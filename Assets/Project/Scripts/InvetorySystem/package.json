@@ -1,5 +1,5 @@
 {
-  "name": "InvetorySystem",
+  "name": "com.reniergaytan.invetorysystem",
   "version": "0.1.0",
   "displayName": "InvetorySystem",
   "description": "An invetory system that favors composition over inheritance",
