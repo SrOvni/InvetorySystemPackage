@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.reniergaytan.utilitiespackage": {
+      "version": "https://github.com/SrOvni/Portafolio_UnityUtilitiesLibrary.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "17ace8dae8e730e66c66a2b0f41473595d3899af"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.5",
       "depth": 0,
