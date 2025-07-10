@@ -19,9 +19,9 @@ namespace RG.InvetorySystem
             }
         }
 
-        public void AddItem(ItemBase item, int amount = 1)
+        public bool AddItem(ItemBase item, int amount = 1)
         {
-            //Si existe el item en el invetario agregarlo
+            //Apilar item
             foreach (var slot in slots)
             {
                 if (slot.CanStack(item))
@@ -30,9 +30,32 @@ namespace RG.InvetorySystem
                     return true;
                 }
             }
+            //
             foreach (var slot in slots)
             {
-                if(slot.IsEmpty())
+                if (slot.IsEmpty)
+                {
+                    slot.AddItem(item, amount);
+                    return true;
+                }
+            }
+            Debug.Log("Inventario lleno");
+            return false;
+        }
+
+        public void AddSlot(int amount)
+        {
+            for (int i = 0; i < amount; i++)
+            {
+                slots.Add(new InvetorySlot());
+            }
+        }
+
+        public void RemoveSlot(int amount)
+        {
+            for (int i = 0; i < amount; i++)
+            {
+                
             }
         }
     }
